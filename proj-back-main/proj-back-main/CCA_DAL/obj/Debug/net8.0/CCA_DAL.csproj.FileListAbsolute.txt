@@ -1,0 +1,14 @@
+C:\Users\2318237\source\repos\CCA\CCA_DAL\bin\Debug\net8.0\CCA_DAL.deps.json
+C:\Users\2318237\source\repos\CCA\CCA_DAL\bin\Debug\net8.0\CCA_DAL.runtimeconfig.json
+C:\Users\2318237\source\repos\CCA\CCA_DAL\bin\Debug\net8.0\CCA_DAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_DAL\bin\Debug\net8.0\CCA_DAL.pdb
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.csproj.AssemblyReference.cache
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.AssemblyInfoInputs.cache
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.AssemblyInfo.cs
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.csproj.CoreCompileInputs.cache
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\refint\CCA_DAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.pdb
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\CCA_DAL.genruntimeconfig.cache
+C:\Users\2318237\source\repos\CCA\CCA_DAL\obj\Debug\net8.0\ref\CCA_DAL.dll

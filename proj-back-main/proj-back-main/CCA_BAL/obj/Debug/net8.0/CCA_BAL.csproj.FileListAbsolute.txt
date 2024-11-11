@@ -1,0 +1,17 @@
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_BAL.deps.json
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_BAL.runtimeconfig.json
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_BAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_BAL.pdb
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_DAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_BAL\bin\Debug\net8.0\CCA_DAL.pdb
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.csproj.AssemblyReference.cache
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.AssemblyInfoInputs.cache
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.AssemblyInfo.cs
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.csproj.CoreCompileInputs.cache
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.csproj.Up2Date
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\refint\CCA_BAL.dll
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.pdb
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\CCA_BAL.genruntimeconfig.cache
+C:\Users\2318237\source\repos\CCA\CCA_BAL\obj\Debug\net8.0\ref\CCA_BAL.dll
