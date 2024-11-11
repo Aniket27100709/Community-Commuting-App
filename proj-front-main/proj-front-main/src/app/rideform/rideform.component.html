@@ -1,0 +1,121 @@
+<h3 style="padding-top: 10px; padding-left: 550px;">Ride Provide Details</h3> 
+    <form autocomplete="off" class="container mt-5 p-5 rounded shadow-lg" style="background-color: #f2e9e4;" #f="ngForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="display: flex; flex-direction: column; border-width: 12px; border-color: red;">
+                     <input type="hidden" name="rpId" >
+                    
+                    <label for="adharcard">Adhar Card</label>
+                    <input type="text" id ="adharcard" name="adharcard" class="form-control" placeholder="AdharCard" [ngClass]="{'is-invalid': adharcard.touched && adharcard.invalid}" ngModel #adharcard="ngModel" minlength="12" maxlength="12" required>
+                    <div class="alert alert-danger" *ngIf="adharcard.touched && adharcard.invalid">
+                        <div *ngIf="adharcard.errors && adharcard.errors['required']">
+                            Adharcard No. is required
+                        </div>
+                        <div *ngIf="adharcard.errors && adharcard.errors['minlength']">
+                            Should be minimum 12 digits
+                        </div>
+                      </div>
+
+                    <label for="emailId">Email ID</label>
+                    <input type="email" name="emailId" class="form-control" placeholder="Email Id" ngModel [ngClass]="{'is-invalid': emailId.touched && emailId.invalid}" #emailId="ngModel" pattern="^[^@]+@cognizant\.com$" required>
+                    <div class="alert alert-danger" *ngIf="emailId.touched && emailId.invalid">
+                        <div *ngIf="emailId.errors && emailId.errors['required']">
+                            Email Id is Required
+                       </div>
+                       <div *ngIf="emailId.errors && emailId.errors['pattern']">
+                           EmailId should end with cognizant.com
+                       </div>
+                    </div>
+
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" class="form-control" placeholder="Phone" ngModel [ngClass]="{'is-invalid': phone.touched && phone.invalid}" #phone="ngModel" minlength="10" maxlength="10" required>
+                    <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+                        <div *ngIf="phone.errors && phone.errors['required']">
+                            Phone Number is Required
+                       </div>
+                       <div *ngIf="phone.errors && phone.errors['minlength']">
+                           Phone numbers should be of 10 digits
+                       </div>
+                    </div>
+
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name" ngModel [ngClass]="{'is-invalid': firstName.touched && firstName.invalid}" #firstName="ngModel" pattern="^[A-Z].*" required> 
+                    <div class="alert alert-danger" *ngIf="firstName.touched && firstName.invalid">
+                        <div *ngIf="firstName.errors && firstName.errors['required']">
+                            First Name is Required
+                       </div>
+                       <div *ngIf="firstName.errors && firstName.errors['pattern']">
+                             First Letter should be capital
+                    </div>
+                    </div>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name" ngModel [ngClass]="{'is-invalid': lastName.touched && lastName.invalid}" #lastName="ngModel" pattern="^[A-Z].*" required>
+                    <div class="alert alert-danger" *ngIf="lastName.touched && lastName.invalid">
+                        <div *ngIf="lastName.errors && lastName.errors['required']">
+                            Last Name is Required
+                       </div>
+                       <div *ngIf="lastName.errors && lastName.errors['pattern']">
+                            First Letter should be capital
+                    </div>
+                    </div>
+
+                    <label for="dlNo">Driving License No.</label>
+                    <input type="text" name="dlNo" class="form-control" placeholder="Enter driving License No." ngModel [ngClass]="{'is-invalid': dlNo.touched && dlNo.invalid}" #dlNo="ngModel" pattern="^\d{4}-\d{3}-\d{3}-\d{3}$" required>
+                    <div class="alert alert-danger" *ngIf="dlNo.touched && dlNo.invalid">
+                        <div *ngIf="dlNo.errors && dlNo.errors['required']">
+                            Dl No is Required
+                       </div>
+                       <div *ngIf="dlNo.errors && dlNo.errors['pattern']">
+                            Dlno must be in format of XXXX-XXX-XXX-XXX
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="validUpto" class="label">Valid Upto</label>
+                            <input type="date" class="form-control" name="validUpto" ngModel [ngClass]="{'is-invalid': validUpto.touched && validUpto.invalid}" #validUpto="ngModel" required>
+                            <div class="alert alert-danger" *ngIf="validUpto.touched && validUpto.invalid">
+                                <div *ngIf="validUpto.errors && validUpto.errors['required']">
+                                    Valid Upto is Required
+                               </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- <label for="age">Age</label> -->
+                    <input type="hidden" name="age">
+                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="birthDate" class="label">BirthDate</label>
+                            <input type="date" class="form-control" name="birthDate" ngModel [ngClass]="{'is-invalid': birthDate.touched && birthDate.invalid}" #birthDate="ngModel"  max="31-12-2005" required>
+                            <div class="alert alert-danger" *ngIf="birthDate.touched && birthDate.invalid">
+                                <div *ngIf="birthDate.errors && birthDate.errors['required']">
+                                    Date of Birth is Required
+                               </div>
+                               <div *ngIf="birthDate.errors && birthDate.errors['max']">
+                                Date of Birth should be before 2006
+                           </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <label>Status:</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="status" value="Register" ngModel checked>
+                        <label class="form-check-label">Registered</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="status" value="Unregister" ngModel>
+                        <label class="form-check-label">Unregistered</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container" style="padding-left: 500px; padding-top: 12px;">
+                <button type="submit" class="btn btn-success" [disabled]="!f.valid">Save</button> &nbsp; &nbsp;&nbsp; &nbsp;
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+    </form> 

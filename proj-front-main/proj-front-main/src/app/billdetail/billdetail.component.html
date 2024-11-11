@@ -1,0 +1,49 @@
+<div class="container">
+<h3>Bill Details By month</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <label for="month">Enter the Month:</label>
+        <!-- <input type="number" class="form-control" placeholder="Enter Month" name="month" id="month" ngModel> -->
+        <br>
+        <select class="form-select" name="month" id="month" placeholder="Enter Month" ngModel required>
+            <option [ngValue]="1">1</option>
+            <option [ngValue]="2">2</option>
+            <option [ngValue]="3">3</option>
+            <option [ngValue]="4">4</option>
+            <option [ngValue]="5">5</option>
+            <option [ngValue]="6">6</option>
+            <option [ngValue]="7">7</option>
+            <option [ngValue]="8">8</option>
+            <option [ngValue]="9">9</option>
+            <option [ngValue]="10">10</option>
+            <option [ngValue]="11">11</option>
+            <option [ngValue]="12">12</option>
+          </select>
+          <small class="text-danger" *ngIf="f.invalid && f.touched">Select the month</small>
+          <br>
+        <button type="submit" class="btn btn-primary">Fetch</button>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="t-head table-dark">
+            <tr>
+                <th>Month</th>
+                <th>No. of Kms Travelled in Total</th>
+                <th>Total Bill</th>
+                <th>No. Of Occupants</th>
+               
+            </tr>
+        </thead>
+        <tbody *ngIf="bills!==undefined">
+            <tr class="table-primary">
+                 <td>{{bills.month}}</td>
+                 <td>{{bills.noOfKm}}</td>
+                 <td>{{bills.totalbill}}</td>
+                 <td>{{bills.noOfOccupants}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

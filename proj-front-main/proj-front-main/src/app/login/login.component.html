@@ -1,0 +1,47 @@
+<div class="container d-flex justify-content-center align-items-center" style="padding-top: 4rem; ">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area" style="width:930px;">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+              <div class="featured-image mb-3" style="padding-top: 15px;">
+                <img src="https://img.freepik.com/free-vector/taxi-mobile-app-service-client_23-2148498498.jpg?t=st=1713085447~exp=1713089047~hmac=d0f6dce4fdcc6bb91a9e40b3692faf64ac7d80d17a377b3e2389c5437c35d1f1&w=740" class="img-fluid" style="width:550px; border-radius: 10px;">
+              </div>
+        </div>
+        <div class="col-md-6 right-box">
+              <div class="row align-items-center">
+                    <form *ngIf="!isRegister">
+                        <div class="header-text mb-4" style="padding-top: 50px; padding-left: 180px;">
+                            <h2>Login</h2>
+                                                </div>
+                                                <div class="input-group mb-3"style="padding-top: 30px;">
+                                                   <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
+                                                </div> 
+                                                <div class="input-group mb-1">
+                                                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                                                 </div> 
+                                                 <div class="input-group mb-1" style="padding-top: 20px;">
+                                                          <small>If previously not registered then you can register &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a (click)="isRegister=!isRegister">Register</a></small>
+                                                 </div>
+                                                 <div class="input-group mb-3" style="padding-top: 30px;">
+                                                    <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                                                 </div> 
+                    </form>
+                    <form  *ngIf="isRegister">
+                        <div class="header-text mb-4" style="padding-top: 50px; padding-left: 180px;">
+                            <h2>Register</h2>
+                                                </div>
+                                                <div class="input-group mb-3"style="padding-top: 30px;">
+                                                   <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
+                                                </div> 
+                                                <div class="input-group mb-1">
+                                                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                                                 </div> 
+                                                 <div class="input-group mb-1" style="padding-top: 20px;">
+                                                          <small>If already registered &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a (click)="isRegister=!isRegister">Login</a></small>
+                                                 </div>
+                                                 <div class="input-group mb-3" style="padding-top: 30px;">
+                                                    <button class="btn btn-lg btn-primary w-100 fs-6">Register</button>
+                                                 </div> 
+                    </form>
+              </div>    
+        </div>
+    </div>
+</div>

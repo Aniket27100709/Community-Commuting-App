@@ -1,0 +1,82 @@
+<form #f="ngForm" class="container mt-5 bg-light p-5 rounded shadow-lg" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="display: flex; flex-direction: column; border-width: 12px; border-color: red;">
+                <!-- <label for="tripId">Trip Id</label>
+                <input type="text" name="tripId" id="tripId" class="form-control" placeholder="Enter Trip Id">
+                 -->
+                <label for="creatorUserId">Creator User Id</label>
+                <input type="text" name="creatorUserId" id="creatorUserId" class="form-control" value="creatorUserId" ngModel>
+
+                <label for="vehicleId">Vehicle ID</label>
+                <input type="text" name="vehicleId" id="vehicleId" class="form-control" value=" vehicleId" ngModel>
+
+                <label for="rideDate">Ride Date</label>
+                <input type="date" name="rideDate" id="rideDate" class="form-control" value="rideDate" ngModel [ngClass]="{'is-invalid': rideDate.touched && rideDate.invalid}" #rideDate="ngModel" (change)="getTodayDate()" required>
+                <div class="alert alert-danger" *ngIf="rideDate.touched && rideDate.invalid">
+                    <div *ngIf="rideDate.errors && rideDate.errors['required']">
+                        Ride Date is required
+                    </div>
+                    <div *ngIf="isInvalidDate">
+                        Ride cannot be start on current date and before it
+                    </div>
+                  </div> 
+
+                <label for="rideTime">Ride Time</label>
+                <input type="datetime" name="rideTime" id="rideTime" class="form-control" value="rideTime" ngModel [ngClass]="{'is-invalid': rideTime.touched && rideTime.invalid}" #rideTime="ngModel" required>
+                <div class="alert alert-danger" *ngIf="rideTime.touched && rideTime.invalid">
+                    <div *ngIf="rideTime.errors && rideTime.errors['required']">
+                        Ride Time is required
+                    </div>
+                  </div>
+
+                <label for="rideStatus">Ride Status</label>
+                <input type="text" name="rideStatus" id="rideStatus" class="form-control" value="rideStatus" ngModel [ngClass]="{'is-invalid': rideStatus.touched && rideStatus.invalid}" #rideStatus="ngModel" required>
+                <div class="alert alert-danger" *ngIf="rideStatus.touched && rideStatus.invalid">
+                    <div *ngIf="rideStatus.errors && rideStatus.errors['required']">
+                        Ride Status is required
+                    </div>
+                  </div>
+
+                <label for="noOfSeat">No. of seats </label>
+                <input type="number" name="noOfSeat" id="noOfSeat" class="form-control" value="noOfSeat" ngModel [ngClass]="{'is-invalid': noOfSeat.touched && noOfSeat.invalid}" #noOfSeat="ngModel" min="1" required>
+                <div class="alert alert-danger" *ngIf="noOfSeat.touched && noOfSeat.invalid">
+                    <div *ngIf="noOfSeat.errors && noOfSeat.errors['required']">
+                        No of Seats is required
+                    </div>
+                    <div *ngIf="noOfSeat.errors && noOfSeat.errors['min']">
+                        No of Seats cannot be zero or less than it
+                    </div>
+                </div>
+
+                <label for="seatsFilled">No of seats filled</label>
+                <input type="number" name="seatsFilled" id="seatsFilled" class="form-control" value="seatsFilled" ngModel [ngClass]="{'is-invalid': seatsFilled.touched && seatsFilled.invalid}" #seatsFilled="ngModel" required>
+                <div class="alert alert-danger" *ngIf="seatsFilled.touched && seatsFilled.invalid">
+                    <div *ngIf="seatsFilled.errors && seatsFilled.errors['required']">
+                        Seats Filled is required
+                    </div>
+                  </div>
+
+                <label for="fromLoc">From Location</label>
+                <input type="text" name="fromLoc" id="fromLoc" class="form-control" value="fromLoc" ngModel [ngClass]="{'is-invalid': fromLoc.touched && fromLoc.invalid}" #fromLoc="ngModel" required>
+                <div class="alert alert-danger" *ngIf="fromLoc.touched && fromLoc.invalid">
+                    <div *ngIf="fromLoc.errors && fromLoc.errors['required']">
+                        Starting Point is required
+                    </div>
+                </div>
+
+                <label for="toLoc">To Location</label>
+                <input type="text" name="toLoc" id="toLoc" class="form-control" value="toLoc" ngModel [ngClass]="{'is-invalid': toLoc.touched && toLoc.invalid}" #toLoc="ngModel" required>
+                <div class="alert alert-danger" *ngIf="toLoc.touched && toLoc.invalid">
+                    <div *ngIf="toLoc.errors && toLoc.errors['required']">
+                        Destination Point is required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding-left: 500px; padding-top: 12px;">
+            <button type="submit" class="btn btn-success">Save</button> &nbsp; &nbsp;&nbsp; &nbsp;
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+    </div>
+</form>

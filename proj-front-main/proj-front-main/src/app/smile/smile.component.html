@@ -1,0 +1,39 @@
+<div class="container">
+    <h3>Smile</h3>
+    <br>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <label for="rpId">Enter the RideInfo Id:</label>
+        <input type="text" class="form-control" placeholder="Enter rpId" name="rpId" id="rpId" ngModel>
+        <label for="month">Enter the Month:</label>
+        <input type="number" class="form-control" placeholder="Enter Month" name="month" id="month" ngModel>
+        <br>
+        <button type="submit" class="btn btn-primary">Fetch</button>
+    </form>
+</div>
+
+<br>
+<br>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="t-head table-dark">
+            <tr>
+                <th>Month</th>
+                <th>RpId</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Occupancy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of smiles" class="table-primary">
+                 <td>{{i.month}}</td>
+                 <td>{{i.rpId}}</td>
+                 <td>{{i.source}}</td>
+                 <td>{{i.destination}}</td>
+                 <td>
+                    <i class="bi bi-emoji-smile-fill" *ngFor="let val of [].constructor(i.occupancy)"></i>
+                 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

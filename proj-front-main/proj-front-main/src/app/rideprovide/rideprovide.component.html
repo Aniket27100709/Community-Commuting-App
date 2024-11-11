@@ -1,0 +1,41 @@
+<div class="container" style="padding-top: 10px;">
+    <a routerLink="/rideform"><button class="btn btn-primary pull-right" >Add new RideProvider</button></a>
+</div>
+<div class="container" style="padding-top: 10px;">
+    <table class="table table-hover">
+        <thead class="t-head table-dark">
+            <tr class="dark">
+                <th>RpId</th>
+                <th>AdharCard</th>
+                <th>EmailId</th>
+                <th>Phone</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Driving License</th>
+                <th>Age</th>
+                <th>BirthDate</th>
+                <th>Status</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let i of rides" class="table-primary">
+                 <td>{{i.rpId}}</td>
+                 <td>{{i.adharcard}}</td>
+                 <td>{{i.emailId}}</td>
+                 <td>{{i.phone}}</td>
+                 <td>{{i.firstName}}</td>
+                 <td>{{i.lastName}}</td>
+                 <td>{{i.dlNo}}</td>
+                 <td>{{i.age}}</td>
+                 <td>{{i.birthDate}}</td>
+                 <td>{{i.status}}</td>
+                 <td><a class="btn btn-success" [routerLink]="['/rideprovide',i.rpId]"><img src="https://cdn-icons-png.freepik.com/256/3597/3597088.png?ga=GA1.1.574983741.1712950745&semt=ais_hybrid"></a></td>
+                 <td><button class="btn btn-danger" (click)="deleteRow($event,i.rpId)" [disabled]="i.status==='Registered'"><img src="https://cdn-icons-png.freepik.com/256/14610/14610727.png?ga=GA1.1.574983741.1712950745&semt=ais_hybrid" alt=""></button></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,50 @@
+<div class="container" style="padding-top: 20px;">
+    <h3>Trip Details</h3>
+    <br>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <label for="tripId">Enter the Trip Id:</label>
+        <input type="text" class="form-control" placeholder="Enter Trip Id" name="tripId" id="tripId" ngModel>
+        <br>
+        <button type="submit" class="btn btn-primary">Fetch</button>
+    </form>
+</div>
+<br>
+<br>
+<div class="container" style="padding-top: 10px;">
+    <a routerLink="/tripform"><button class="btn btn-info pull-right" >Add new Trip</button></a>
+</div>
+<br>
+<div class="container">
+    <table class="table table-hover">
+        <thead class="t-head table-dark">
+            <tr>
+                <th>Trip Id</th>
+                <th>Creator user id</th>
+                <th>Vehicle Id</th>
+                <th>Ride Date</th>
+                <th>Ride Time</th>
+                <th>Ride Status</th>
+                <th>No. of Seats</th>
+                <th>Seats filled</th>
+                <th>Starting Location</th>
+                <th>Destination</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="trips!==undefined ">
+            <tr  class="table-primary">
+                 <td>{{trips.tripId}}</td>
+                 <td>{{trips.creatorUserId}}</td>
+                 <td>{{trips.vehicleId}}</td>
+                 <td>{{trips.rideDate}}</td>
+                 <td>{{trips.rideTime}}</td>
+                 <td>{{trips.rideStatus}}</td>
+                 <td>{{trips.noOfSeat}}</td>
+                 <td>{{trips.seatsFilled}}</td>
+                 <td>{{trips.fromLoc}}</td>
+                 <td>{{trips.toLoc}}</td>
+                 <td><a [routerLink]="['/trip',trips.tripId]"><button class="btn btn-success pull-right" >Update</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
